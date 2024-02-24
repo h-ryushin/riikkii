@@ -1,0 +1,106 @@
+.form-start {
+    font-size: 1.6rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    padding: 40px 0 70px;
+    text-align: center;
+}
+
+form {
+    padding: 100px 90px;
+    width: 1110px;
+    background-color: rgb(247, 247, 247);
+    margin: 0 auto 70px;
+}
+
+form h4 {
+    font-size: 1.6rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    padding: 30px 0 10px;
+}
+
+span {
+    font-size: 1.2rem;
+    color: rgb(57, 30, 136);
+    padding-left: 10px;
+}
+
+label {
+    padding: 0 35px 0 5px;
+    font-size: 1.4rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.text {
+    width: 300px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 6px;
+}
+
+.item2 span{
+    color: rgb(51, 51, 51);
+}
+
+.item2 .text{
+    width: 200px;
+}
+
+.item3 .text {
+    width: 600px;
+    height: 255px;
+}
+
+.select {
+    width: 300px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 6px;
+    font-size: 1.4rem;
+    font-family:"Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+/* レスポンシブ対応 (改行)*/
+@media screen and (max-width:1250px) {
+    .form-start {
+        font-size: 1.8rem;
+        padding: 40px 40px 30px;
+    }
+
+    form {
+        padding: 30px;
+        width: 89vw;
+    }
+
+    form h4 {
+        font-size: 1.6rem;
+        padding: 30px 0 10px;
+    }
+
+    label {
+        align-items: center;
+        padding: 0 0 16px 0;
+        font-size: 1.3rem;
+        display: block;
+    }
+
+    .text {
+        width: 275px;
+    }
+
+    .item3 .text {
+        width: 275px;
+        height: 300px;
+    }
+
+    .select {
+        width: 275px;
+        height: 40px;
+        font-size: 1.4rem;
+    }
+
+    .MORE {
+        padding-top: 50px;
+    }
+}

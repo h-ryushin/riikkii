@@ -1,0 +1,36 @@
+
+.news-contents {
+    padding: 60px 18% 300px 18%;
+}
+
+.pager {
+    width: 155px;
+    display: flex;
+    margin: 0 auto 100px;
+}
+
+.pager p {
+    font-size: 2.0rem;
+    text-align: center;
+    /* align-items: center; */
+    /* width: 45px;
+    height: 45px; */
+    padding: 4px 17px;
+    border-radius: 50%;
+    background-color: rgb(241, 235, 248);
+    color: rgb(118, 51, 164);
+    font-weight: bold;
+}
+
+#two, #three {
+    background-color: rgb(118, 51, 164);
+    color: white;
+    margin-left: 10px;
+}
+
+/* レスポンシブ対応 (NEWS)*/
+@media screen and (max-width:1250px) {
+    .news-contents {
+        padding: 40px 5.5vw;
+    }
+}

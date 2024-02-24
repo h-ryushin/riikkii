@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/contact.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <!-- headerとtop-wrapper -->
+    <header id="header">
+        <a href="./index.html"><img src="./IMG/logo.png" alt=""></a>
+        <nav>
+            <ul>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./service.html">SERVICE</a></li>
+                <li><a href="./works.html">WORKS</a></li>
+                <li><a href="./company.html">COMPANY</a></li>
+                <li><a href="./recruit.html">RECRUIT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div class="header-modal-wrapper" id="header-modal">
+        <nav>
+            <ul>
+                <li><a href="./news.html">NEWS</a></li>
+                <li><a href="./service.html">SERVICE</a></li>
+                <li><a href="./works.html">WORKS</a></li>
+                <li><a href="./company.html">COMPANY</a></li>
+                <li><a href="./recruit.html">RECRUIT</a></li>
+                <li><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="top">
+        <div class="top-title">
+            <h2>CONTACT</h2>
+            <h6>お問い合わせ</h6>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <p><span>HOME</span> > CONTACT</p>
+    </div>
+
+    <p class="form-start">Webサイトの制作のご依頼やお見積りなど、お気軽にご相談ください。</p>
+    <form action="#">
+        <div class="item">
+            <h4>お問い合わせ種別<span>*必須</span></h4>
+            <label for=""><input type="radio" name="contact">お仕事のご依頼・ご相談</label>
+            <label for=""><input type="radio" name="contact">お見積りのご依頼</label>
+            <label for=""><input type="radio" name="contact">採用について</label>
+            <label for=""><input type="radio" name="contact">その他</label>
+        </div>
+        <div class="item">
+            <h4>お名前<span>*必須</span></h4>
+            <input type="text" class="text">
+        </div>
+        <div class="item">
+            <h4>会社名</h4>
+            <input type="text" class="text">
+        </div>
+        <div class="item">
+            <h4>メールアドレス<span>*必須</span></h4>
+            <input type="text" class="text">
+        </div>
+        <div class="item2">
+            <h4>お電話番号<span>（半角数字ハイフンなし）</span></h4>
+            <input type="text" class="text">
+        </div>
+        <div class="item3">
+            <h4>お問い合わせ内容<span>*必須</span></h4>
+            <textarea name="content" id="" cols="30" rows="10" class="text"></textarea>
+        </div>
+        <div class="item4">
+            <h4>PON DESIGNをどちらでお知りになりましたか？<span>*必須</span></h4>
+            <select name="where" class="select">
+                <option value="" selected hidden><label for="">選択してください</label></option>
+                <option value="google"><label for="">Google/Yahoo検索</label></option>
+                <option value="sns"><label for="">SNS</label></option>
+                <option value="blog"><label for="">ブログ</label></option>
+                <option value="friend"><label for="">友人や知人</label></option>
+                <option value="other"><label for="">その他</label></option>
+            </select>
+        </div>
+        <div class="MORE">
+            <input type="submit" value="送信する" class="btn more">
+        </div>
+    </form>
+
+    <footer>
+        <ul>
+            <li><a href="./index.html" id="home">HOME</a></li>
+            <li><a href="./news.html">NEWS</a></li>
+            <li><a href="./service.html">SERVICE</a></li>
+            <li><a href="./works.html">WORKS</a></li>
+            <li><a href="./company.html">COMPANY</a></li>
+            <li><a href="./recruit.html">RECRUIT</a></li>
+            <li><a href="./contact.html">CONTACT</a></li>
+        </ul>
+        <p class="c">© PON DESIGN</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

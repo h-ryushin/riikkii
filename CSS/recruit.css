@@ -1,0 +1,166 @@
+.pattern {
+    background-image: url(../IMG/recruit-back.png);
+    background-repeat: repeat;
+    padding-top: 115px;
+    padding-bottom: 110px;
+}
+
+.recruit-main {
+    text-align: center;
+}
+
+.recruit-main h1{
+    font-size: 7.2rem;
+    color: rgb(57, 30, 136);
+}
+
+.recruit-main h5 {
+    font-size: 3.2rem;
+    color: rgb(57, 30, 136);
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    padding: 15px 0 40px;
+}
+
+.recruit-main p {
+    font-size: 1.6rem;
+    padding-bottom: 40px;
+}
+
+/* ここから */
+.occupation {
+    padding: 70px 165px 140px;
+}
+
+.sub-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.sub-title h2 {
+    color: rgb(57, 30, 136);
+    font-size: 3.2rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+.web-designer {
+    padding: 60px 95px;
+    background-color: white;
+    border: 1px solid rgb(184, 174, 213);
+    border-radius: 10px;
+}
+
+.web-designer h3 {
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 2.4rem;
+}
+
+.web-designer ul {
+    padding-bottom: 20.5px;
+}
+
+.web-designer ul li {
+    display: flex;
+    padding: 30.5px 0;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.web-designer ul li h6 {
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 1.5rem;
+    width: 20%;
+    padding-left: 30px;
+}
+
+.web-designer ul li p {
+    font-size: 1.5rem;
+}
+
+.more {
+    width: 220px;
+    height: 51px;
+    font-size: 1.5rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    font-weight: bold;
+    padding: 16px 79px;
+}
+
+.MORE p {
+    font-size: 1.2rem;
+}
+
+.company-movie {
+    
+}
+
+.movie {
+    width: 1110px;
+    height: 624px;
+    background-color: rgb(229, 229, 229);
+    margin: 0 auto;
+}
+
+/* レスポンシブ対応 (RECRUIT)*/
+@media screen and (max-width:1250px) {
+    .pattern {
+        padding-top: 115px;
+        padding: 40px 0 80px;
+    }
+
+    .recruit-main h1{
+        font-size: 4.8rem;
+        color: rgb(57, 30, 136);
+    }
+    
+    .recruit-main h5 {
+        font-size: 1.8rem;
+        color: rgb(57, 30, 136);
+        padding: 15px 0 40px;
+    }
+    
+    .recruit-main p {
+        font-size: 1.5rem;
+        padding-bottom: 40px;
+    }
+
+    .occupation {
+        padding: 40px 5.5vw 80px;
+    }
+
+    .sub-title h2 {
+        font-size: 2.4rem;
+    }
+
+    .web-designer {
+        padding: 30px 20px;
+    }
+    
+    .web-designer h3 {
+        padding-bottom: 15px;
+        font-size: 1.6rem;
+    }
+
+    .web-designer ul {
+        padding-bottom: 10.5px;
+    }
+
+    .web-designer ul li {
+        display: block;
+        padding: 20.5px 0;
+    }
+
+    .web-designer ul li h6 {
+        font-size: 1.4rem;
+        width: 50%;
+        padding-left: 0;
+    }
+
+    .web-designer ul li p {
+        font-size: 1.4rem;
+    }
+
+    .movie {
+        width: 89vw;
+        height: 48vw;
+    }
+}

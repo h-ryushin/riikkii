@@ -1,0 +1,786 @@
+html {
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/*　header　*/
+header {
+    position: fixed;
+    object-fit: cover;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4%;
+    height: 86px;
+    transition: all 0.5s;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    font-size: 1.4rem;
+    margin-left: 25px;
+}
+
+header ul li a {
+    color: white;
+    position: relative;
+}
+
+header ul li a:hover {
+    color: white;
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background:white;
+    transition: all .3s;
+    transform: scale(0, 1);
+    transform-origin: left top;
+}
+
+header ul li a:hover::after {
+    transform: scale(1, 1);
+}
+
+.transform{
+    background-image: url(../IMG/header.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 64px;
+}
+
+/* ハンバーガーメニュー */
+.burger {
+    position: fixed;
+    top: 12px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 200;
+}
+
+.burger div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+}
+
+.open .line1 {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.open .line2 {
+    opacity: 0;
+}
+
+.open .line3 {
+    transform: rotate(45deg) translate(-8px, -6px);
+}
+
+/* header-modal (スマホ用)*/
+.header-modal-wrapper{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../IMG/modal.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 100;
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.header-modal-wrapper ul {
+    padding-top: 300px;
+}
+
+.header-modal-wrapper ul li {
+    padding-bottom: 20px;
+}
+
+.header-modal-wrapper ul li a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* top-wrapper */
+.top-wrapper {
+    background-image: url(../IMG/top.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    text-align: center;
+}
+
+.top-wrapper h1 {
+    font-size: 7.2rem;
+    padding-top: 265px;
+}
+
+.top-wrapper h3 {
+    font-size: 2.4rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    padding-top: 20px;
+}
+
+/* ボタン基本的なやつ */
+.btn {
+    color: white;
+    display: inline-block;
+}
+
+.contact{
+    font-size: 1.5rem;
+    padding: 18px 70px;
+    border:1px solid white;
+    border-radius: 36px;
+    margin-top: 50px;
+}
+
+/*スクロールダウン全体の場所*/
+.scrolldown1{
+	position:absolute;
+	right:3%;
+	bottom:0;
+    /*全体の高さ*/
+	height:148px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+	position: absolute;
+    transform: rotate(90deg);
+	left:-18px;
+	top: -22px;
+	color: #eee;
+	font-size: 1.2rem;
+    font-weight: 300;
+	letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+	content: "";
+    /*描画位置*/
+	position: absolute;
+	top: 0;
+    /*線の形状*/
+	width: 1px;
+	height: 80px;
+	background: #eee;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+	animation: pathmove 1.4s ease-in-out infinite;
+	opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height:50px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:80px;
+		opacity: 0;
+	}
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width:1250px) {
+    /* header */
+    header {
+        height: 64px;
+        transition: 0.5s;
+    }
+
+    header ul {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* top-wrapper */
+    .top-wrapper {
+        text-align: left;
+        padding: 0 5.5vw;
+    }
+
+    .top-wrapper h1{
+        font-size: 4.0rem;
+    }
+
+    .top-wrapper h3 {
+        font-size: 1.6rem;
+    }
+
+    .scrolldown1 {
+        right: 5%;
+    }
+}
+
+
+/* NEWS(お知らせ) */
+.news-wrapper {
+    padding-top: 70px;
+    padding-bottom: 140px;
+    display: flex;
+    margin: 0 auto;
+    width: 910px;
+}
+
+/* コンテンツタイトル
+　　何回も使う */
+.title h2{
+    color: rgb(57, 30, 136);
+    font-size: 3.6rem;
+}
+
+.title h6 {
+    color: rgb(57, 30, 136);
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 1.3rem;
+}
+
+.news-content {
+    display: flex;
+    flex-wrap: nowrap; 
+    padding-left: 50px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+/* .news-content p {
+    margin-right: 20px;
+} */
+
+.day {
+    width: 90px;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    margin-right: 20px;
+}
+
+.news {
+    width: 82px;
+    height: 22px;
+    font-size: 1.2rem;
+    background-color: rgb(232, 232, 232);
+    border-radius: 13px;
+    align-items: center;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.cont {
+    font-size: 1.5rem;
+    width: 738px;
+    margin-right: 20px;
+}
+
+
+/* レスポンシブ対応 (NEWS)*/
+@media screen and (max-width:1250px) {
+    .news-wrapper {
+        width: 100vw;
+        padding: 40px 5.5vw 80px 5.5vw;
+        display: block;
+    }
+
+    .title {
+        text-align: center;
+        padding-bottom: 36px;
+    }
+
+    .title h2 {
+        font-size: 3.0rem;
+    }
+
+    .news-content {
+        flex-wrap: wrap; 
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .day {
+        margin-right: 15px;
+    }
+
+    .news {
+        height: 19px;
+        margin-right: 15px;
+        font-size: 1.1rem;
+    }
+
+    .cont {
+        margin-right: 0;
+    }
+}
+
+
+/* SERVICE(事業内容) */
+.service-wrapper {
+    padding: 0 11%;
+}
+
+.service-wrapper .title{
+    text-align: center;
+}
+
+.service-contents {
+    display: flex;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+
+.business {
+    width: 33%;
+    text-align: center;
+}
+
+.business h4{
+    padding: 20px 0 18px 0;
+    font-size: 1.8rem;
+
+}
+
+.business p {
+    font-size: 1.5rem;
+    width: 97%;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+/* レスポンシブ対応 (SERVICE)*/
+@media screen and (max-width:1250px) {
+    .service-wrapper {
+        padding: 0 5.5vw;
+    }
+
+    .service-contents {
+        display: block;
+        padding: 0;
+    }
+
+    .business {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .business img {
+        width: 100%;
+    }
+
+    .business p {
+        text-align: left;
+        font-size: 1.4rem;
+    }
+}
+
+/* MOREとかのボタン */
+.more {
+    width: 200px;
+    font-size: 1.4rem;
+    padding: 18px 77px;
+    margin-top: 30px;
+    background-color: rgb(118, 51, 164);
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.MORE {
+    text-align: center;
+}
+
+
+/* WORKS(制作実績) */
+.works-wrapper {
+    padding: 148px 90px 40px 90px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.blank {
+    width: 33%;
+}
+
+.works-wrapper img {
+    position: absolute;
+    top: 208px;
+    width: 750px;
+}
+
+.main {
+    width: 66%;
+    padding: 216px 85px 216px 419px;
+    text-align: center;
+    background-color: rgb(232, 232, 232);
+}
+
+.main p {
+    padding-top: 30px;
+}
+
+
+/* レスポンシブ対応 (WORK)*/
+@media screen and (max-width:1250px) {
+    .works-wrapper {
+        padding: 0;
+        margin: 40px 0;
+        width: 100vw;
+        height: 66vh;
+        display: block;
+        position: relative;
+    }
+
+    .works-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 88vw;
+    }
+
+    .blank {
+        width: 100%;
+        height: 22%;
+    }
+
+    .main {
+        width: 100%;
+        height: 78%;
+        padding: 36% 0 0 0;
+        text-align: center;
+        background-color: rgb(232, 232, 232);
+    }
+
+    .main p {
+        padding-top: 0;
+    }
+}
+
+
+/* COMPANY(わたしたちについて) */
+.company-wrapper {
+    position: relative;
+    padding: 60px 70px;
+}
+
+.img1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.img2 {
+    position: absolute;
+    top: 144px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.company {
+    text-align: center;
+    padding: 144px 0 70px 0;
+}
+
+.company h3 {
+    font-size: 4.0rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    background: linear-gradient(transparent 70%, yellow 30%);
+    display: inline-block;
+    margin: 37px 0;
+}
+
+.company p {
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 1.5rem;
+}
+
+
+/* レスポンシブ対応 (COMPANY)*/
+@media screen and (max-width:1250px) {
+    .company-wrapper {
+        padding: 0;
+    }
+
+    .company {
+        padding: 60px 5.5vw 120px 5.5vw;
+    }
+
+    .img2 {
+        display: none;
+    }
+
+    .company h3 {
+        font-size: 3.2rem;
+        font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+        background: linear-gradient(transparent 70%, yellow 30%);
+        display: inline;
+        margin: 37px 0;
+    }
+
+    .company p {
+        font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+        font-size: 1.4rem;
+        padding-top: 40px;
+    }
+}
+
+
+/* RECRUIT(採用情報) */
+.recruit-wrapper {
+    display: flex;
+    width: 1110px;
+    margin: 0 auto;
+    padding-bottom: 110px;
+}
+
+.recruit {
+    width: 40%;
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    padding: 70px 107px;
+}
+
+.recruit p {
+    font-size: 1.5rem;
+    padding-top: 30px;
+}
+
+.recruit-wrapper img {
+    width: 60%;
+}
+
+
+/* レスポンシブ対応 (COMPANY)*/
+@media screen and (max-width:1250px) {
+    .recruit-wrapper {
+        flex-direction: column;
+        width: 100vw;
+        padding-bottom: 40px;
+    }
+
+    .recruit {
+        order: 2;
+        width: 100%;
+        padding: 60px 0;
+        text-align: center;
+    }
+
+    .recruit p {
+        font-size: 1.4rem;
+        padding-top: 0;
+    }
+
+    .recruit-wrapper img {
+        order: 1;
+        width: 100%;
+    }
+
+    .recruit .MORE {
+        margin: 0 auto;
+    }
+}
+
+
+/* ここから下全ページ共通 */
+
+/* CONTACT(お問い合わせ) */
+.contact-wrapper {
+    background-color: rgb(247, 247, 247);
+    text-align: center;
+    width: 100%;
+    padding: 80px 0;
+}
+
+.contact-wrapper p {
+    padding-top: 30px;
+    font-size: 1.5rem;
+}
+
+
+/* レスポンシブ対応 (COMPANY)*/
+@media screen and (max-width:1250px) {
+    .contact-wrapper p {
+        padding: 0;
+    }
+}
+
+
+/* フッター */
+footer {
+    background-color: rgb(18, 14, 25);
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 20px;
+    /* justify-content: space-evenly; */
+}
+
+footer ul li a {
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1;
+    padding-right: 20px;
+    font-weight: bold;
+}
+
+#home {
+    display: none;
+}
+
+.c {
+    color: rgb(167, 152, 183);
+    padding-bottom: 62px;
+}
+
+
+/* レスポンシブ対応 (footer)*/
+@media screen and (max-width:1250px) {
+    footer ul {
+        flex-wrap: wrap;
+        justify-content: left;
+        padding-left: 30px;
+    }
+
+    footer ul li {
+        padding-bottom: 20px;
+    }
+
+    #home {
+        display: block;
+    }
+}
+
+
+/* トップ */
+.top {
+    background-image: url(../IMG/top.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 240px;
+    color: white;
+    text-align: center;
+}
+
+.top-title {
+    padding-top: 100px;
+}
+
+.top-title h2 {
+    font-size: 3.6rem;
+}
+
+.top-title h6 {
+    font-size: 1.3rem;
+    padding-top: 5px;
+}
+
+.breadcrumb {
+    height: 45px;
+    background-color: rgb(247, 247, 247);
+}
+
+.breadcrumb p { 
+    height: 45px;
+    font-size: 1.2rem;
+    padding: 13px 0 0 165px;
+}
+
+.breadcrumb span {
+    color: rgb(57, 30, 136);
+}
+
+/* レスポンシブ対応 (改行)*/
+@media screen and (max-width:1250px) {
+    span {
+        display: inline-block;
+    }
+
+    .top {
+        height: 190px;
+    }
+
+    .top-title {
+        padding-top: 90px;
+    }
+
+    .breadcrumb {
+        height: 25px;
+        background-color: rgb(247, 247, 247);
+    }
+    
+    .breadcrumb p { 
+        height: 25px;
+        font-size: 1.1rem;
+        padding: 3px 0 0 20px;
+    }
+}
+
+

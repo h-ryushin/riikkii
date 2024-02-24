@@ -1,0 +1,113 @@
+.NEWS {
+    width: 100vw;
+}
+
+.container {
+    width: 750px;
+    margin: 0 auto;
+    padding: 70px 0 110px;
+}
+
+.heading {
+    font-size: 3.2rem;
+}
+
+.news-content {
+    padding: 13px 0 30px 0;
+}
+
+.article {
+    width: 100%;
+}
+
+.text{
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    padding-top: 27px;
+    font-size: 1.5rem;
+}
+
+.heading-big {
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 2.4rem;
+    margin-top: 60px;
+    padding-left: 15px;
+    border-left: 6px solid rgb(118, 51, 164);
+    border-radius: 3px;
+}
+
+.heading-small {
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+
+.sns {
+    width: 50%;
+    padding-top: 40px;
+}
+
+.direction {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    border-top: 1px solid rgb(184, 174, 213);
+    border-bottom: 1px solid rgb(184, 174, 213);
+}
+
+.back {
+    width: 50%;
+}
+
+.next {
+    width: 50%;
+}
+
+.direction p {
+    font-size: 1.4rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    padding: 10px 31.5px;
+    margin: 16px 0;
+    text-align: center;
+    color: rgb(184, 174, 213);
+}
+
+.back p {
+    border-right: solid rgb(184, 174, 213);
+}
+
+.back-news {
+    font-size: 1.4rem;
+    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+    color: rgb(184, 174, 213);
+    display: block;
+    margin-top: 20.5px;
+    text-align: center;
+}
+
+/* レスポンシブ対応 (WORK)*/
+@media screen and (max-width:1250px) {
+    .container {
+        width: 100vw;
+        padding: 40px 20px 80px;
+    }
+
+    .heading {
+        font-size: 2.2rem;
+    }
+
+    .heading-big {
+        font-size: 1.8rem;
+    }
+
+    .heading-small {
+        font-size: 1.6rem;
+    }
+
+    .text {
+        font-size: 1.4rem;
+    }
+
+    .direction p {
+        font-size: 1.2rem;
+    }
+}

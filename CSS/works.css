@@ -1,0 +1,40 @@
+.works {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 70px 0 110px 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.work {
+    width: 33%;
+}
+
+.work img {
+    height: 238px;
+}
+
+.work p {
+    font-size: 1.6rem;
+}
+
+
+/* レスポンシブ対応 (WORKS)*/
+@media screen and (max-width:1250px) {
+    .works {
+        width: 89vw;
+        margin: 0 auto;
+        padding: 40px 0 80px 0;
+        text-align: center;
+    }
+
+    .work {
+        width: 100%;
+    }
+
+    .work img {
+        width: 100%;
+        height: auto;
+    }
+}
